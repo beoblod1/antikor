@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Антикоррозийная обработка днища автомобиля — Красноярск</title>
+<meta name="description" content="Профессиональная антикоррозийная обработка днища автомобиля в Красноярске. Защита от ржавчины, опытные мастера, гарантия.">
+
+<!-- Подключение шрифта Google Fonts (Inter) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  /* ==================== ОБЩИЕ НАСТРОЙКИ ==================== */
+  :root {
+    --bg-dark: #333333;      /* основной фон сайта */
+    --bg-darker: #2a2a2a;    /* чуть темнее для чередования блоков */
+    --accent: #d32f2f;       /* акцентный красный цвет */
+    --accent-hover: #b71c1c; /* красный при наведении */
+    --text-light: #f5f5f5;   /* основной светлый текст */
+    --text-muted: #c7c7c7;   /* приглушённый серый текст */
+    --card-bg: #3d3d3d;      /* фон карточек */
+    --card-border: #4d4d4d;  /* граница карточек */
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', Arial, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+
+  img, picture {
+    max-width: 100%;
+    display: block;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  section {
+    padding: 70px 0;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 45px;
+    letter-spacing: 0.5px;
+    color: var(--text-light);
+  }
+
+  .section-title span {
+    color: var(--accent);
+  }
+
+  /* ==================== ШАПКА / ГЕРОЙ-БЛОК ==================== */
+  /* Здесь меняйте заголовок, подзаголовок и текст на кнопке */
+  .hero {
+    /* Фоновая фотография (тема: обработка днища автомобиля) + тёмное затемнение поверх,
+       чтобы текст оставался хорошо читаемым */
+    background:
+      linear-gradient(180deg, rgba(30,30,30,0.88) 0%, rgba(51,51,51,0.92) 100%),
+      url('https://static.tildacdn.com/tild3964-6362-4632-b837-623261363431/f7374767c7d52b908419.jpeg') center/cover no-repeat;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom: 3px solid var(--accent);
+  }
+
+  .hero-inner {
+    max-width: 780px;
+    padding: 0 20px;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background-color: rgba(211, 47, 47, 0.15);
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+    font-weight: 800;
+    line-height: 1.25;
+    margin-bottom: 18px;
+    color: var(--text-light);
+  }
+
+  .hero p.subtitle {
+    font-size: 20px;
+    color: var(--text-muted);
+    margin-bottom: 35px;
+    font-weight: 400;
+  }
+
+  /* Кнопка "Записаться на обработку" — ссылка-заглушка на телефон */
+  .btn-main {
+    display: inline-block;
+    background-color: var(--accent);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 16px 42px;
+    border-radius: 8px;
+    transition: background-color 0.25s ease, transform 0.2s ease;
+    box-shadow: 0 8px 20px rgba(211, 47, 47, 0.35);
+  }
+
+  .btn-main:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+  }
+
+  .hero-note {
+    margin-top: 18px;
+    font-size: 14px;
+    color: var(--text-muted);
+  }
+
+  /* ==================== БЛОК "ЭТАПЫ ОБРАБОТКИ" ==================== */
+  .stages {
+    /* Фоновое фото автосервиса + затемнение, чтобы карточки читались хорошо */
+    background:
+      linear-gradient(180deg, rgba(42,42,42,0.93) 0%, rgba(42,42,42,0.96) 100%),
+      url('https://centr-to.ru/storage/uploads/blog/Articles/stanciya-tehnicheskogo-obslujivaniya-avtomobilei/10.jpg') center/cover fixed no-repeat;
+  }
+
+  .stages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+  }
+
+  .stage-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 28px 24px;
+    position: relative;
+    border-top: 3px solid var(--accent);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .stage-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+  }
+
+  .stage-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background-color: var(--accent);
+    color: #fff;
+    font-weight: 700;
+    border-radius: 50%;
+    margin-bottom: 16px;
+    font-size: 16px;
+  }
+
+  .stage-card h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+    color: var(--text-light);
+    font-weight: 700;
+  }
+
+  .stage-card p {
+    font-size: 15px;
+    color: var(--text-muted);
+  }
+
+  /* ==================== БЛОК "ФОТО ДО / ПОСЛЕ" ==================== */
+  /*
+    ВАЖНО: здесь сейчас стоят CSS-заглушки вместо настоящих фотографий.
+    Чтобы вставить реальное фото, замените div с классом "photo-box"
+    на тег <img src="ваша-ссылка-или-файл.jpg" alt="Описание фото">
+    Например:
+    <img src="foto-do-1.jpg" alt="Днище до обработки" style="border-radius:12px; width:100%; height:220px; object-fit:cover;">
+  */
+  .gallery {
+    background-color: var(--bg-dark);
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 22px;
+  }
+
+  .photo-box {
+    height: 220px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 2px dashed var(--card-border);
+    color: var(--text-muted);
+    text-align: center;
+    padding: 10px;
+  }
+
+  /* Заглушка "Фото до" — тёмно-серый градиент */
+  .photo-before {
+    background: repeating-linear-gradient(45deg, #3a3a3a, #3a3a3a 10px, #333333 10px, #333333 20px);
+    border-color: #555;
+  }
+
+  /* Заглушка "Фото после" — с красным акцентом, символизирует результат */
+  .photo-after {
+    background: repeating-linear-gradient(45deg, #3d2b2b, #3d2b2b 10px, #332727 10px, #332727 20px);
+    border-color: var(--accent);
+    color: #f1b8b8;
+  }
+
+  /* ==================== БЛОК "ПОЧЕМУ ВЫБИРАЮТ НАС" ==================== */
+  .why {
+    /* Фоновое фото мастера в гараже + затемнение */
+    background:
+      linear-gradient(180deg, rgba(42,42,42,0.93) 0%, rgba(42,42,42,0.96) 100%),
+      url('https://k-t.by/wp-content/uploads/2026/05/antikor-skrytyh-polostej-1024x576.avif') center/cover fixed no-repeat;
+  }
+
+  /* ==================== БЛОК "5 ЛЕТ НА РЫНКЕ / ОТЗЫВЫ" ==================== */
+  .stats {
+    background:
+      linear-gradient(180deg, rgba(20,20,20,0.85) 0%, rgba(20,20,20,0.9) 100%),
+      url('https://80.img.avito.st/image/1/1.nKZq_Lasoire3ybN092bvCSZM03c.3zkx5oKAPCefL1U6E2hpiWNHMa9i3hi-UZ76smUM3fE') center/cover fixed no-repeat;
+    border-top: 3px solid var(--accent);
+    border-bottom: 3px solid var(--accent);
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    text-align: center;
+  }
+
+  .stat-item {
+    padding: 20px 10px;
+  }
+
+  .stat-number {
+    font-size: 46px;
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+
+  .stat-label {
+    font-size: 16px;
+    color: var(--text-light);
+    font-weight: 500;
+  }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 26px;
+    text-align: center;
+  }
+
+  .why-card {
+    padding: 30px 18px;
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    border: 1px solid var(--card-border);
+  }
+
+  .why-icon {
+    font-size: 40px;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .why-card h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+    color: var(--text-light);
+  }
+
+  .why-card p {
+    font-size: 14px;
+    color: var(--text-muted);
+  }
+
+  /* ==================== БЛОК "КОНТАКТЫ" ==================== */
+  /* Здесь меняйте адрес и номер телефона на свои */
+  .contacts {
+    /* Фоновое фото гаража + затемнение */
+    background:
+      linear-gradient(180deg, rgba(51,51,51,0.93) 0%, rgba(51,51,51,0.96) 100%),
+      url('https://autobezzabot.ru/wp-content/uploads/2021/08/antigravijnaya-zashhita-dnishha-001.jpg') center/cover fixed no-repeat;
+    text-align: center;
+  }
+
+  /* Кнопка "Как проехать" — второстепенная, контурная кнопка */
+  .btn-secondary {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--text-light);
+    font-weight: 700;
+    font-size: 17px;
+    padding: 14px 36px;
+    border-radius: 8px;
+    border: 2px solid var(--text-light);
+    transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+
+  .btn-secondary:hover {
+    background-color: rgba(255,255,255,0.1);
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-2px);
+  }
+
+  .buttons-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .contacts-box {
+    max-width: 640px;
+    margin: 0 auto;
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 14px;
+    padding: 45px 30px;
+    border-top: 4px solid var(--accent);
+  }
+
+  .contacts-box p {
+    font-size: 17px;
+    margin-bottom: 14px;
+    color: var(--text-muted);
+  }
+
+  .contacts-box .address {
+    color: var(--text-light);
+    font-weight: 600;
+  }
+
+  .phone-link {
+    display: inline-block;
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--accent);
+    margin: 14px 0 20px;
+    letter-spacing: 0.5px;
+  }
+
+  .phone-link:hover {
+    color: var(--accent-hover);
+  }
+
+  .contacts-box .btn-main {
+    margin-top: 10px;
+  }
+
+  /* ==================== ФУТЕР ==================== */
+  footer {
+    background-color: #262626;
+    text-align: center;
+    padding: 30px 20px;
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+
+  footer .footer-small {
+    margin-top: 6px;
+    font-size: 12px;
+    color: #8f8f8f;
+  }
+
+  /* ==================== АДАПТИВНОСТЬ ДЛЯ ПЛАНШЕТОВ ==================== */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 32px;
+    }
+    .hero p.subtitle {
+      font-size: 17px;
+    }
+    .section-title {
+      font-size: 26px;
+    }
+    section {
+      padding: 50px 0;
+    }
+  }
+
+  /* ==================== АДАПТИВНОСТЬ ДЛЯ ТЕЛЕФОНОВ ==================== */
+  @media (max-width: 480px) {
+    .hero h1 {
+      font-size: 26px;
+    }
+    .hero p.subtitle {
+      font-size: 15px;
+    }
+    .btn-main {
+      padding: 14px 28px;
+      font-size: 16px;
+    }
+    .btn-secondary {
+      padding: 12px 24px;
+      font-size: 15px;
+      margin-left: 0;
+    }
+    .stat-number {
+      font-size: 34px;
+    }
+    .phone-link {
+      font-size: 21px;
+    }
+    .section-title {
+      font-size: 22px;
+    }
+    .contacts-box {
+      padding: 30px 18px;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <!-- ==================== ГЛАВНЫЙ ЭКРАН (HERO) ==================== -->
+  <!-- Меняйте заголовок, подзаголовок и номер телефона в кнопке ниже -->
+  <header class="hero">
+    <div class="hero-inner">
+      <span class="hero-badge">Красноярск</span>
+      <h1>Антикоррозийная обработка днища автомобиля</h1>
+      <p class="subtitle">Профессиональная защита от ржавчины в Красноярске</p>
+
+      <!-- Кнопка-заглушка, звонок на указанный номер -->
+      <a href="tel:+79082002600" class="btn-main">Записаться на обработку</a>
+
+      <p class="hero-note">Звонок бесплатный · Ответим на все вопросы по телефону</p>
+    </div>
+  </header>
+
+  <!-- ==================== БЛОК "ЭТАПЫ ОБРАБОТКИ" ==================== -->
+  <section class="stages">
+    <div class="container">
+      <h2 class="section-title">Этапы <span>обработки</span></h2>
+      <div class="stages-grid">
+
+        <div class="stage-card">
+          <div class="stage-number">1</div>
+          <h3>Диагностика и осмотр</h3>
+          <p>Осматриваем днище автомобиля, оцениваем степень коррозии и подбираем оптимальную технологию обработки.</p>
+        </div>
+
+        <div class="stage-card">
+          <div class="stage-number">2</div>
+          <h3>Очистка и мойка днища</h3>
+          <p>Удаляем грязь, песок и рыхлую ржавчину для качественной адгезии защитного состава.</p>
+        </div>
+
+        <div class="stage-card">
+          <div class="stage-number">3</div>
+          <h3>Сушка кузова</h3>
+          <p>Просушиваем обработанные поверхности, чтобы состав лёг ровно и держался максимально долго.</p>
+        </div>
+
+        <div class="stage-card">
+          <div class="stage-number">4</div>
+          <h3>Обезжиривание поверхности</h3>
+          <p>Убираем остатки масел и технических жидкостей, которые мешают сцеплению материала с металлом.</p>
+        </div>
+
+        <div class="stage-card">
+          <div class="stage-number">5</div>
+          <h3>Нанесение защитного состава</h3>
+          <p>Наносим профессиональный антикоррозийный состав равномерным слоем на все элементы днища.</p>
+        </div>
+
+        <div class="stage-card">
+          <div class="stage-number">6</div>
+          <h3>Обработка скрытых полостей</h3>
+          <p>Дополнительно защищаем пороги, арки и труднодоступные полости кузова от внутренней коррозии.</p>
+        </div>
+
+        <div class="stage-card">
+          <div class="stage-number">7</div>
+          <h3>Финальная проверка</h3>
+          <p>Проверяем качество покрытия, при необходимости наносим второй слой и даём рекомендации по уходу.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== БЛОК "ФОТО ДО / ПОСЛЕ" ==================== -->
+  <!--
+    ВАЖНО: ниже стоят CSS-заглушки вместо реальных фотографий.
+    Чтобы добавить свои фото, замените div.photo-box на тег <img>.
+    Пример:
+    <img src="do-1.jpg" alt="Днище до обработки" style="width:100%; height:220px; object-fit:cover; border-radius:12px;">
+  -->
+  <section class="gallery">
+    <div class="container">
+      <h2 class="section-title">Фото <span>до / после</span></h2>
+      <div class="gallery-grid">
+
+        <!-- Замените этот блок на фото "до" -->
+        <div class="photo-box photo-before">Фото до</div>
+
+        <!-- Замените этот блок на фото "после" -->
+        <div class="photo-box photo-after">Фото после</div>
+
+        <!-- Замените этот блок на фото "до" -->
+        <div class="photo-box photo-before">Фото до</div>
+
+        <!-- Замените этот блок на фото "после" -->
+        <div class="photo-box photo-after">Фото после</div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== БЛОК "ПОЧЕМУ ВЫБИРАЮТ НАС" ==================== -->
+  <section class="why">
+    <div class="container">
+      <h2 class="section-title">Почему выбирают <span>нас</span></h2>
+      <div class="why-grid">
+
+        <div class="why-card">
+          <span class="why-icon">🛡️</span>
+          <h3>Профессиональные составы</h3>
+          <p>Используем только качественные антикоррозийные материалы проверенных производителей.</p>
+        </div>
+
+        <div class="why-card">
+          <span class="why-icon">🔧</span>
+          <h3>Опытные мастера</h3>
+          <p>Специалисты с многолетним опытом работы обрабатывают каждый автомобиль вручную.</p>
+        </div>
+
+        <div class="why-card">
+          <span class="why-icon">✅</span>
+          <h3>Гарантия на работу</h3>
+          <p>Предоставляем гарантию на выполненные работы и используемые материалы.</p>
+        </div>
+
+        <div class="why-card">
+          <span class="why-icon">📋</span>
+          <h3>Соблюдаем технологию</h3>
+          <p>Строго следуем всем этапам обработки без сокращений, чтобы результат держался дольше.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== БЛОК "5 ЛЕТ НА РЫНКЕ / ОТЗЫВЫ" ==================== -->
+  <!-- Здесь можно поменять цифры на свои реальные показатели -->
+  <section class="stats">
+    <div class="container">
+      <h2 class="section-title">Нам <span>доверяют</span></h2>
+      <div class="stats-grid">
+
+        <div class="stat-item">
+          <div class="stat-number">5+</div>
+          <div class="stat-label">лет на рынке Красноярска</div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-number">1000+</div>
+          <div class="stat-label">обработанных автомобилей</div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-number">50+</div>
+          <div class="stat-label">десятки положительных отзывов</div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">гарантия на выполненные работы</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== БЛОК "КОНТАКТЫ" ==================== -->
+  <!-- Здесь меняйте адрес и номер телефона на свои -->
+  <section class="contacts">
+    <div class="container">
+      <h2 class="section-title">Контакты</h2>
+      <div class="contacts-box">
+        <p>Приезжайте — проконсультируем и покажем примеры работ.</p>
+        <p class="address">г. Красноярск, ул. Волгоградская 2Б, 75 бокс</p>
+
+        <!-- Кликабельный номер телефона -->
+        <a href="tel:+79082002600" class="phone-link">8 (908) 200-26-00</a>
+
+        <!-- Кнопки: позвонить и построить маршрут в 2ГИС -->
+        <div class="buttons-row">
+          <a href="tel:+79082002600" class="btn-main">Позвонить сейчас</a>
+          <a href="https://go.2gis.com/quOwD" target="_blank" rel="noopener noreferrer" class="btn-secondary">Как проехать</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ФУТЕР ==================== -->
+  <footer>
+    <p>© 2026 Антикор‑Сервис Красноярск</p>
+    <p class="footer-small">Сайт для информационных целей. Цены и наличие уточняйте по телефону.</p>
+  </footer>
+
+</body>
+</html>
